@@ -10,18 +10,24 @@ It currently supports UFO and Glyphs format font files.
 
 You can download and install the latest version of this software from the Python package index (PyPI) as follows:
 
+````
 pip install --upgrade bumpfontversion
+```
 
 ## Usage
 
 For users of bump2version, please note that the interface is slightly different. You can *either* use:
 
-> bumpfontversion --new-version 0.5 MyFont.ufo
+```
+bumpfontversion --new-version 0.5 MyFont.ufo
+```
 
 to set the version directly, or
 
-> bumpfontversion --part minor MyFont.glyphs # Upgrade the minor version
-> bumpfontversion --part major MyFont.glyphs # Upgrade the major version
+```
+bumpfontversion --part minor MyFont.glyphs # Upgrade the minor version
+bumpfontversion --part major MyFont.glyphs # Upgrade the major version
+```
 
 As per bump2version, you can use `--commit` to commit the new version to git, and `--tag` to add a new git tag.
 
