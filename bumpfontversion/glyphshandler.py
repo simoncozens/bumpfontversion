@@ -29,4 +29,4 @@ class GlyphsHandler:
         font["versionMinor"] = int(new_version["minor"].value)
         logger.info(f"Saving file {file}")
         with open(file, "w", encoding="utf-8") as fp:
-            openstep_plist.dump(font, fp)
+            openstep_plist.dump(font, fp, indent=0)
