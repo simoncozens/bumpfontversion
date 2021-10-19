@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bumpfontversion"
-version = "0.1.0"
+version = "0.3.0"
 description = "Bumps the version of a font source file"
 authors = ["Simon Cozens <simon@simon-cozens.org>"]
 license = "Apache"
