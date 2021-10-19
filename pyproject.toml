@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3"
 openstep-plist = "*"
 ufoLib2 = "*"
+glyphsLib = "6.0.0b4"
 bump2version = "1.0.1"
 
 [tool.poetry.dev-dependencies]
