@@ -13,6 +13,7 @@ from bumpversion.version_part import VersionPart, VersionConfig
 import logging
 import os
 from datetime import datetime
+from fontTools.designspaceLib import DesignSpaceDocument
 
 from .ufohandler import UFOHandler
 from .glyphshandler import GlyphsHandler
@@ -27,6 +28,16 @@ special_char_context = {c: c for c in ("#", ";")}
 parser = r"(?P<major>\d+)\.(?P<minor>\d+)"
 serializer = "{major}.{minor}"
 vc = VersionConfig(parser, [serializer], None, None)
+
+
+def ufos_from_designspaces(designspaces):
+    ufos = []
+    for fp in designspaces:
+        ds = DesignSpaceDocument()
+        ds.read(fp)
+        for src in ds.sources:
+            ufos.append(src.path)
+    return ufos
 
 
 def main():
@@ -123,6 +134,13 @@ def main():
         if new_version is None:
             logger.error(f"Bad version {args.new_version}; should be format X.Y")
             sys.exit(1)
+
+    designspaces = [f for f in args.files if f.endswith(".designspace")]
+    additional_ufos = ufos_from_designspaces(designspaces)
+    if additional_ufos:
+        args.files = [
+            f for f in args.files if not f.endswith(".designspace")
+        ] + additional_ufos
 
     for f in args.files:
         handled = False
