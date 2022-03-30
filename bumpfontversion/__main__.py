@@ -17,8 +17,9 @@ from fontTools.designspaceLib import DesignSpaceDocument
 
 from .ufohandler import UFOHandler
 from .glyphshandler import GlyphsHandler
+from .sfnthandler import SFNTHandler
 
-handlers = [UFOHandler(), GlyphsHandler()]
+handlers = [UFOHandler(), GlyphsHandler(), SFNTHandler()]
 
 logging.basicConfig(format="%(name)s %(levelname)s: %(message)s")
 
