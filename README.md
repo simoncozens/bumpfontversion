@@ -10,7 +10,7 @@ It currently supports UFO and Glyphs format font files.
 
 You can download and install the latest version of this software from the Python package index (PyPI) as follows:
 
-````
+```
 pip install --upgrade bumpfontversion
 ```
 

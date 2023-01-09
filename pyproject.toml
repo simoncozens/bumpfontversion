@@ -3,7 +3,7 @@ name = "bumpfontversion"
 version = "0.3.0"
 description = "Bumps the version of a font source file"
 authors = ["Simon Cozens <simon@simon-cozens.org>"]
-license = "Apache"
+license = "Apache-2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
