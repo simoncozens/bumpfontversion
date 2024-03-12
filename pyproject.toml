@@ -10,7 +10,7 @@ readme = "README.md"
 python = "^3.7"
 openstep-plist = "*"
 ufoLib2 = "*"
-glyphsLib = "6.0.0b4"
+glyphsLib = "^6.6.6"
 fontTools = "*"
 bump2version = "1.0.1"
 
