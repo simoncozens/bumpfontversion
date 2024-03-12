@@ -122,8 +122,6 @@ def main():
     if args.verbose:
         logger.setLevel("INFO")
 
-    print(logger.getEffectiveLevel())
-
     if not args.files:
         print("No files to change; nothing to do")
         sys.exit(0)
