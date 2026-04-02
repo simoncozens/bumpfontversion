@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 class GlyphsHandler:
     def applies_to(self, file):
-        return file.endswith(".glyphs")
+        return file.endswith(".glyphs") or file.endswith(".glyphspackage")
 
     def current_version(self, file):
         font = GSFont(file)

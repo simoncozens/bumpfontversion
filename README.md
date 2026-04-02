@@ -4,7 +4,7 @@ Version-bump your *source* font files.
 
 This tool, patterned after the wonderful [bumpversion](https://github.com/c4urself/bump2version), allows you to update the version of your font source files, as well as create commits and tags in git.
 
-It currently supports UFO and Glyphs format font files.
+It currently supports `.ufo`, `.glyphs` and `.glyphspackage` format font files.
 
 ## Installation
 
